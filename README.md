@@ -86,7 +86,7 @@ namespace _Example
 			int yearCurrent = a.Year;
 			if(!(yearBirth >= 1920 && yearBirth <= yearCurrent))
 			{
-				validTextBox1.MsgError.setError(validTextBox1, "El rango que se puede ingresar es de 1929 hasta " + yearCurrent);
+				validTextBox1.MsgError.setError(validTextBox1, "El rango que se puede ingresar es de 1920 hasta " + yearCurrent);
 				e.Cancel = true;
 			}
 		}
@@ -95,7 +95,7 @@ namespace _Example
 		{
 			DateTime a = DateTime.Now;
 			int yearBirth = Convert.ToInt32(validTextBox1.Text);
-			int age = yearBirth - a.Year;
+			int age = a.Year - yearBirth;
 			MessageBox.Show("Tu edad es de: " + age + " años.");
 		}
 	}
